@@ -7,10 +7,10 @@
   </head>
   <body>
     <h1>ExpressYourself</h1>
-    <a href="/new">Create a post</a>
     <ul>
       <% messages.forEach((message) => { %> <%- include("message", {message:
       message}) %> <% }); %>
     </ul>
+    <%- include("form") %>
   </body>
 </html>
