@@ -242,7 +242,7 @@ main {
 
 .message-list > .message .text {
   background-color: var(--alternate-background-colour);
-  padding: 8px 12px;
+  padding: 8px 16px;
   border-radius: 24px;
   flex: 0;
   align-self: flex-start;
