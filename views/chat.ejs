@@ -40,10 +40,11 @@
       </footer>
     </div>
     <script>
-      // Scroll to bottom of chat on load
+      // Scroll to bottom of chat on load and focus on the message textbox
       window.addEventListener("load", () => {
-        const box = document.querySelector("main");
-        box.scrollTop = box.scrollHeight;
+        const chat = document.querySelector("main");
+        chat.scrollTop = chat.scrollHeight;
+        document.querySelector("#message-text").focus();
       });
 
       // Allow enter to send messages
