@@ -171,7 +171,8 @@ main {
   flex: 1;
   resize: none;
   border: none;
-  border-radius: var(--message-border-radius);
+  border-top-left-radius: var(--message-border-radius);
+  border-bottom-left-radius: var(--message-border-radius);
   padding: 12px 0 12px 24px;
 }
 
