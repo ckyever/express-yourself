@@ -12,6 +12,9 @@ app.set("view engine", "ejs");
 
 app.use(express.urlencoded({ extended: true }));
 
+const assetsPath = path.join(currentDirectory, "public");
+app.use(express.static(assetsPath));
+
 app.use("/", indexRouter);
 app.use("/chat", chatRouter);
 
