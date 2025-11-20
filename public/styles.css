@@ -136,7 +136,31 @@ body {
 }
 
 .text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
   padding: 20px;
+}
+
+h1 {
+  font-weight: 600;
+}
+
+.username-indicator {
+  color: var(--alternate-text-colour);
+}
+
+.edit-username {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--main-text-colour);
+  text-decoration: none;
+}
+
+.edit-username-icon {
+  width: 28px;
 }
 
 header,
@@ -181,7 +205,7 @@ main {
 }
 
 .send-button {
-  padding: 0;
+  padding: 8px;
   border: none;
   border-radius: 50%;
   width: 60px;

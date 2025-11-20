@@ -17,8 +17,13 @@
       <header>
         <div class="text-container">
           <h1>TheGroupChat</h1>
-          <p>Chatting as: "<%= username %>"</p>
-          <a href="/">Edit username</a>
+          <p class="username-indicator">Chatting as: "<%= username %>"</p>
+          <a class="edit-username" href="/"
+            >Edit username<img
+              class="edit-username-icon"
+              src="/chevron-right.svg"
+              alt="right pointing chevron"
+          /></a>
         </div>
       </header>
       <main>
