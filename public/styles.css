@@ -81,11 +81,13 @@ h6 {
 :root {
   --main-background-colour: #ffffff;
   --alternate-background-colour: #f2f2f2;
+  --main-text-colour: #000000;
+  --alternate-text-colour: #838383;
   --accent-colour: #0a83ff;
   --border-colour: #e3e3e3;
   --slightly-rounded-border: 12px;
   --message-border-radius: 40px;
-  --chat-border: 4px solid var(--border-colour);
+  --chat-border: 3px solid var(--border-colour);
 }
 
 body {
@@ -137,6 +139,11 @@ body {
   padding: 20px;
 }
 
+header,
+footer {
+  flex: 0 0 auto;
+}
+
 header {
   background-color: var(--alternate-background-colour);
   border-bottom: var(--chat-border);
@@ -148,7 +155,8 @@ header .text-container {
 }
 
 main {
-  flex: 1;
+  flex: 1 1 auto;
+  overflow-y: auto;
 }
 
 .message-form {
@@ -178,6 +186,47 @@ main {
   width: 60px;
   height: 60px;
   margin: 8px;
+  background-color: var(--accent-colour);
+  color: var(--main-background-colour);
+}
+
+.message-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0;
+  list-style: none;
+}
+
+.message-list .timestamp {
+  text-align: center;
+  color: var(--alternate-text-colour);
+}
+
+.message-list > .message {
+  align-self: flex-start;
+}
+
+.message-list > .message .username {
+  color: var(--alternate-text-colour);
+  padding: 0 12px 4px 12px;
+}
+
+.message-list > .message .text {
+  background-color: var(--alternate-background-colour);
+  padding: 12px;
+  border-radius: 24px;
+}
+
+.message-list > .message:nth-child(4n) {
+  align-self: flex-end;
+}
+
+.message-list > .message:nth-child(4n) .username {
+  text-align: right;
+}
+
+.message-list > .message:nth-child(4n) .text {
   background-color: var(--accent-colour);
   color: var(--main-background-colour);
 }
