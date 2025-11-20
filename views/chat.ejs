@@ -13,13 +13,25 @@
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
-    <h1>TheGroupChat</h1>
-    <p>Chatting as: "<%= username %>"</p>
-    <a href="/">Edit username</a>
-    <ul>
-      <% messages.forEach((message) => { %> <%- include("message", {message:
-      message}) %> <% }); %>
-    </ul>
-    <%- include("form") %>
+    <div class="chat-container">
+      <header>
+        <div class="text-container">
+          <h1>TheGroupChat</h1>
+          <p>Chatting as: "<%= username %>"</p>
+          <a href="/">Edit username</a>
+        </div>
+      </header>
+      <main>
+        <div class="text-container">
+          <ul>
+            <% messages.forEach((message) => { %> <%- include("message",
+            {message: message}) %> <% }); %>
+          </ul>
+        </div>
+      </main>
+      <footer>
+        <div class="text-container"><%- include("form") %></div>
+      </footer>
+    </div>
   </body>
 </html>

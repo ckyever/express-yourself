@@ -84,15 +84,16 @@ h6 {
   --accent-colour: #0a83ff;
   --border-colour: #e3e3e3;
   --slightly-rounded-border: 12px;
+  --message-border-radius: 40px;
+  --chat-border: 4px solid var(--border-colour);
 }
 
 body {
   font-family: "Inter";
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  height: 100vh;
+  margin-top: 80px;
 }
 
 .username-form {
@@ -100,7 +101,6 @@ body {
   flex-direction: column;
   justify-content: center;
   gap: 12px;
-  transform: translateY(-200px);
 }
 
 .username-label {
@@ -121,4 +121,63 @@ body {
   border: none;
   border-radius: var(--slightly-rounded-border);
   cursor: pointer;
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  border: var(--chat-border);
+  height: 1100px;
+  width: 650px;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.text-container {
+  padding: 20px;
+}
+
+header {
+  background-color: var(--alternate-background-colour);
+  border-bottom: var(--chat-border);
+  height: 140px;
+}
+
+header .text-container {
+  text-align: center;
+}
+
+main {
+  flex: 1;
+}
+
+.message-form {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: var(--chat-border);
+  border-radius: var(--message-border-radius);
+}
+
+.message-text {
+  flex: 1;
+  resize: none;
+  border: none;
+  border-radius: var(--message-border-radius);
+  padding: 12px 0 12px 24px;
+}
+
+.message-text:focus {
+  outline: none;
+}
+
+.send-button {
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin: 8px;
+  background-color: var(--accent-colour);
+  color: var(--main-background-colour);
 }
