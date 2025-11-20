@@ -5,8 +5,9 @@ import user from "../models/user.js";
 const getChatTimestamp = (utcDateTime) => {
   return new Date(utcDateTime).toLocaleString("en-AU", {
     weekday: "short",
-    month: "short",
     day: "numeric",
+    month: "short",
+    year: "numeric",
     hour: "2-digit",
     minute: "2-digit",
     hour12: true,
